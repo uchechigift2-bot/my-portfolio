@@ -1,0 +1,367 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f3ed;
+    color: #3d2b1f;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background-color: #3d2b1f;
+    color: white;
+    text-align: center;
+    padding: 35px 20px 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 10px 0 25px;
+    font-size: 1rem;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #6f4e37;
+}
+
+nav a.active {
+    background-color: #c89f72;
+    color: #3d2b1f;
+    font-weight: bold;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(61, 43, 31, 0.08);
+    text-align: center;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #5a3d2b;
+    font-size: 1.6rem;
+}
+
+
+/* ================================
+   LISTS
+================================ */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   LINKS & BUTTONS
+================================ */
+
+main a {
+    color: #6f4e37;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #3d2b1f;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #3d2b1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+/* ================================
+   GALLERY
+================================ */
+
+.gallery-intro, 
+.gallery-section,
+.gallery-closing {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(61, 43, 31, 0.08);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    background-color: #f8f3ed;
+}
+
+.gallery-card-content {
+    padding: 18px;
+}
+
+.gallery-card-content h3 {
+    margin-top: 0;
+    color: #5a3d2b;
+}
+
+.gallery-card-content p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: 240px;
+    }
+}
+/* ================================
+   HOME HERO
+================================ */
+
+.hero {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    color: #6f4e37;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    background-color: #6f4e37;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.hero-buttons a:hover {
+    background-color: #3d2b1f;
+}
+/* ================================
+   WHAT I DO
+================================ */
+
+.services {
+    text-align: center;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    max-width: 750px;
+    margin: 25px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.services li {
+    background-color: #f8f3ed;
+    padding: 18px;
+    border-radius: 10px;
+    color: #3d2b1f;
+}
+
+@media (max-width: 600px) {
+    .services ul {
+        grid-template-columns: 1fr;
+    }
+}
+/* Professional Strength section */
+.strengths {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.strengths h2 {
+    margin-bottom: 20px;
+}
+
+.strengths p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+/* Why Work With Me section */
+.why-work {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.why-work h2 {
+    margin-bottom: 20px;
+}
+
+.why-work p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Let's Connect section */
+.connect {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.connect h2 {
+    margin-bottom: 20px;
+}
+
+.connect p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
